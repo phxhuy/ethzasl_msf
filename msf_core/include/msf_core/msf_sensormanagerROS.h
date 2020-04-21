@@ -86,7 +86,7 @@ struct MSF_SensorManagerROS : public msf_core::MSF_SensorManager<EKFState_T> {
     reconfServer_->setCallback(f);
 
     pnh.param("data_playback", this->data_playback_, false);
-    pnh.param("msf_output_frame", msf_output_frame_, std::string("world"));
+    pnh.param("msf_output_frame", msf_output_frame_, std::string("map"));   //world
 
     ros::NodeHandle nh("msf_core");
 
